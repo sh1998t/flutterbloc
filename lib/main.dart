@@ -2,6 +2,7 @@ import 'package:bloc_dars/logic/bloc/weather_cubit.dart';
 import 'package:bloc_dars/logic/reporisitories/weather_repository.dart';
 import 'package:bloc_dars/logic/services/weather_api_services.dart';
 import 'package:bloc_dars/presentation/screens/home_screen.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -16,8 +17,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RepositoryProvider(
-        create: (context) =>
-            WeatherRepository(weatherApiServices: WeatherApiServices()),
+        create: (context) => WeatherRepository(
+              weatherApiServices: WeatherApiServices(dio: Dio()),
+            ),
         child: MultiBlocProvider(
           providers: [
             BlocProvider(

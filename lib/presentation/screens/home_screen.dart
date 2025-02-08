@@ -12,27 +12,67 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    context.read<WeatherCubit>().getWeather("tashkent");
+    context.read<WeatherCubit>().getWeather("Tashkent");
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          SizedBox(
-            height: 50,
-          ),
-          Center(
-            child: Text(
-              'data',
-              style: TextStyle(fontSize: 24, color: Colors.black),
+    return BlocBuilder<WeatherCubit, WeatherState>(
+      builder: (context, state) {
+        if (state is WeatherLoading) {
+          return Center(child: CircularProgressIndicator());
+        } else if (state is WeatherError) {
+          return Center(
+            child: Text(state.massage),
+          );
+        } else if (state is WeatherData) {
+          return Scaffold(
+            body: Column(
+              children: [
+                SizedBox(
+                  height: 100,
+                ),
+                Column(
+                  children: [
+                    Center(
+                      child: Text(
+                        state.weather.main,
+                        style: TextStyle(fontSize: 24, color: Colors.black),
+                      ),
+                    ),
+                    Center(
+                      child: Text(
+                        state.weather.desc,
+                        style: TextStyle(fontSize: 24, color: Colors.black),
+                      ),
+                    ),
+                    Center(
+                      child: Text(
+                        state.weather.city,
+                        style: TextStyle(fontSize: 24, color: Colors.black),
+                      ),
+                    ),
+                    Center(
+                      child: Text(
+                        "${state.weather.temperature}",
+                        style: TextStyle(fontSize: 24, color: Colors.black),
+                      ),
+                    ),
+                    Center(
+                      child: Text(
+                        "${state.weather.main}",
+                        style: TextStyle(fontSize: 24, color: Colors.black),
+                      ),
+                    ),
+                  ],
+                )
+              ],
             ),
-          )
-        ],
-      ),
+          );
+        }
+        return Container();
+      },
     );
   }
 }
