@@ -6,15 +6,6 @@ part of 'weather.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Weather _$WeatherFromJson(Map<String, dynamic> json) => Weather(
-      id: (json['id'] as num).toInt(),
-      main: json['main'] as String,
-      desc: json['desc'] as String,
-      icon: json['icon'] as String,
-      temperature: (json['temperature'] as num).toDouble(),
-      city: json['city'] as String,
-    );
-
 Map<String, dynamic> _$WeatherToJson(Weather instance) => <String, dynamic>{
       'id': instance.id,
       'main': instance.main,
@@ -23,3 +14,11 @@ Map<String, dynamic> _$WeatherToJson(Weather instance) => <String, dynamic>{
       'temperature': instance.temperature,
       'city': instance.city,
     };
+//Weather _$WeatherFromJson(Map<String, dynamic> json) => Weather(
+//       id: (json['id'] as num).toInt(),
+//       main: json['main'] as String,
+//       desc: json['desc'] as String,
+//       icon: json['icon'] as String,
+//       temperature: (json['temperature'] as num).toDouble(),
+//       city: json['city'] as String,
+//     );
