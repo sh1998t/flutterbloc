@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    context.read<WeatherCubit>().getWeather("Tashkent");
+    context.read<WeatherCubit>().fetchWeather("Tashkent");
   }
 
   String getWeatherBackground(String main) {
@@ -43,8 +43,8 @@ class _HomeScreenState extends State<HomeScreen> {
           if (state is WeatherLoading) {
             return Center(child: CircularProgressIndicator());
           } else if (state is WeatherError) {
-            return Center(child: Text(state.massage));
-          } else if (state is WeatherData) {
+            return Center(child: Text(state.message));
+          } else if (state is WeatherLoaded) {
             return Stack(
               children: [
                 Image.asset(
@@ -76,7 +76,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           onPressed: () {
                             String cityName = textEditingController.text.trim();
                             if (cityName.isNotEmpty) {
-                              context.read<WeatherCubit>().getWeather(cityName);
+                              context
+                                  .read<WeatherCubit>()
+                                  .fetchWeather(cityName);
                             }
                           },
                           child: Text("Get Weather"),
@@ -107,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       Center(
                         child: Text(
-                          "${state.weather.main}",
+                          state.weather.main,
                           style: TextStyle(fontSize: 24, color: Colors.black),
                         ),
                       ),

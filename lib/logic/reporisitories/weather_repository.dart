@@ -1,10 +1,13 @@
-import 'package:bloc_dars/data/models/weather.dart';
-import 'package:bloc_dars/logic/services/weather_api_services.dart';
+import '../../data/constans/url_const.dart';
+import '../../data/models/weather.dart';
+import '../services/weather_api_services.dart';
 
 class WeatherRepository {
-  final WeatherApiServices weatherApiServices;
-  WeatherRepository({required this.weatherApiServices});
-  Future<Weather> getWeather(String city) async {
-    return await weatherApiServices.getWeather(city);
+  final WeatherApiService apiService;
+
+  WeatherRepository(this.apiService);
+
+  Future<Weather> fetchWeather(String city) async {
+    return await apiService.getWeather(city, "metric", ApiKey);
   }
 }

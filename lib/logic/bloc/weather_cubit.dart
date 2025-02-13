@@ -6,15 +6,17 @@ import 'package:meta/meta.dart';
 part 'weather_state.dart';
 
 class WeatherCubit extends Cubit<WeatherState> {
-  final WeatherRepository weatherRepository;
-  WeatherCubit(this.weatherRepository) : super(WeatherInitial());
-  Future<void> getWeather(String city) async {
+  final WeatherRepository repository;
+
+  WeatherCubit(this.repository) : super(WeatherInitial());
+
+  Future<void> fetchWeather(String city) async {
     emit(WeatherLoading());
     try {
-      final weather = await weatherRepository.getWeather(city);
-      emit(WeatherData(weather));
-    } catch (error) {
-      emit(WeatherError(error.toString()));
+      final weather = await repository.fetchWeather(city);
+      emit(WeatherLoaded(weather));
+    } catch (e) {
+      emit(WeatherError("Xatolik: ${e.toString()}"));
     }
   }
 }

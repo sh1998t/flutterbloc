@@ -10,11 +10,11 @@
 		</data>
 		<key>flutter_assets/AssetManifest.bin</key>
 		<data>
-		IHhwCLVHdVdrSllKt77nN/66NXk=
+		ixEboOI2XRtNJNX6FBVGWkP3urE=
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		ebacrL6otmXJxtGzN4MjXU45MmQ=
+		UHgBlAP470nWoORGgoDU1m8jAG8=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>flutter_assets/NOTICES.Z</key>
 		<data>
-		HHOgl4T4nu8mr42J4pHjyloX29I=
+		5hcCW/los6ZKNeoOKtkiG78lPGg=
 		</data>
 		<key>flutter_assets/assets/images/cloudy.jpg</key>
 		<data>
@@ -40,6 +40,10 @@
 		<data>
 		wBoL9m1CqomQEMj2UQRznAKqbK4=
 		</data>
+		<key>flutter_assets/assets/images/snow.jpg</key>
+		<data>
+		OqeZU7G2TAoZlBL4TJxJXDjQnbU=
+		</data>
 		<key>flutter_assets/assets/images/sunny.jpg</key>
 		<data>
 		7oKnuF0sCneo77wv4H5RfxEdjK0=
@@ -54,7 +58,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		Yw8R/6xwK9KxoYAcV3Pp6QjoZyQ=
+		kiw+Yl2pakqXr/AoheIJEN80++E=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -75,14 +79,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hM1IvDLkqMl8xRhz6bMSrffREek8Hugt2B7lY0a+cj0=
+			5zCifYco63D8D3Ka69Y7nESOsJ5Hd03iDWkh6LUy97U=
 			</data>
 		</dict>
 		<key>flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KxPkm/dX/g9rUiJ0X8uidKHTmHHc6ARMGDBV0PSsGSo=
+			LIMvucQcBLqRAnHk1y0fDepTB/hXUKnyRrMBXOC4ygg=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -96,7 +100,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2JX+s8aizzeHIdm+qGtyTKe9ttT4XQufQV9XlNeaMmo=
+			D7oY9qx+Q/18rGbK+dyAgPmMjev+cyLrd9XzPjuFSfY=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/images/cloudy.jpg</key>
@@ -127,6 +131,13 @@
 			WcsCVWC0cy2p0fcoOz7C3klYR0eU15ijd7qOUWDXAkg=
 			</data>
 		</dict>
+		<key>flutter_assets/assets/images/snow.jpg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			BxhWPz4Hu5/v2p/pvlL/yBVTb7JhYrHfsVmF+yzz0y4=
+			</data>
+		</dict>
 		<key>flutter_assets/assets/images/sunny.jpg</key>
 		<dict>
 			<key>hash2</key>
@@ -152,7 +163,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bLEL8uRr+/MtRVE0603t+ewpUVwxYm3wJy+qEQJmBfg=
+			bHi6dH51OKXFcs3MZNT6qNiNEm4XQThwSIhNcD47loE=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
